@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul class="lang">
+        <li>
+            C++
+        </li>
+        <li>
+            Python
+        </li>
+    </ul>
+    <script>
+
+        function addlang(langname){
+
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langname));
+            document.querySelector(".lang").appendChild(li)
+        }
+
+        addlang("Java")
+
+        const hold = document.querySelector('li:nth-child(2)');
+        const nl = document.createElement('li')
+        nl.textContent = "Ruby"
+        hold.replaceWith(nl);
+
+        // Removing element
+
+        const store = document.querySelector('li:first-child');
+        store.remove();
+
+    </script>
+</body>
+</html>

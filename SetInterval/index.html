@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Javascript</title>
+</head>
+<body>
+
+    <h1>Hey my code is working</h1>
+
+    <button id="btn">Change Text</button>
+</body>
+<script>
+        const store = document.querySelector('h1');
+        const hold = function(){
+              store.innerHTML="404 Error"
+        }
+
+        const timeout = setTimeout(hold,2000);
+
+        const button = document.querySelector("#btn")
+
+        button.addEventListener('click',function(){
+            clearTimeout(timeout);
+        })
+</script>
+</html>

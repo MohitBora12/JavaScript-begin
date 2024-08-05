@@ -19,16 +19,19 @@
         const btn1 = document.querySelector('#btn1')
         const btn2 = document.querySelector('#btn2')
         const body = document.querySelector('body')
+        let t1
         const makeChange = function(){
             const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
             body.style.backgroundColor=randomColor;   
         }
         const changeColor = btn1.addEventListener('click',function(){
-            const t1 = setInterval(makeChange,2000);
-            btn2.addEventListener('click',function(){
-                 clearInterval(t1);
-            })
+             t1 = setInterval(makeChange,2000);
         })
+
+         btn2.addEventListener('click',function(){
+                 clearInterval(t1);
+                 t1 = null
+            })
         
 
         
